@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Préstamo Material STEAM - CEIP Toxiria</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/html5-qrcode"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { background-color: #0f172a; color: #f8fafc; font-family: system-ui, -apple-system, sans-serif; }
+    .nav-active { color: #38bdf8; border-top: 2px solid #38bdf8; }
+    #reader video { border-radius: 0.75rem; object-fit: cover; width: 100% !important; height: 100% !important; }
+  </style>
+</head>
+<body class="pb-20 max-w-md mx-auto min-h-screen relative border-x border-slate-800 shadow-2xl">
+
+  <header class="bg-slate-900 border-b border-slate-800 p-4 sticky top-0 z-50 flex items-center justify-between">
+    <div class="flex items-center space-x-3">
+      <div class="bg-sky-500 text-slate-950 p-2 rounded-xl font-bold">
+        <i class="fa-solid fa-microchip text-xl"></i>
+      </div>
+      <div>
+        <h1 class="font-bold text-base leading-tight">STEAM Toxiria</h1>
+        <p class="text-xs text-slate-400">CEIP Toxiria · Préstamos & Aula</p>
+      </div>
+    </div>
+    <span class="bg-emerald-500/10 text-emerald-400 text-xs px-2.5 py-1 rounded-full border border-emerald-500/20 font-medium">Sheets Sync ON</span>
+  </header>
+
+  <main id="app-content" class="p-4 space-y-4"></main>
+
+  <nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-slate-900/95 backdrop-blur border-t border-slate-800 flex justify-around py-2 z-50 text-slate-400 text-xs">
+    <button onclick="switchTab('scanner')" id="nav-scanner" class="flex flex-col items-center py-1 px-3 space-y-1 nav-active">
+      <i class="fa-solid fa-qrcode text-lg"></i>
+      <span>Escáner</span>
+    </button>
+    <button onclick="switchTab('prestar')" id="nav-prestar" class="flex flex-col items-center py-1 px-3 space-y-1">
+      <i class
